@@ -234,6 +234,7 @@ household_with_lab$formInfo.interviewDate <- as.Date(household_with_lab$formInfo
 
 household_with_lab$age <- as.integer(household_with_lab$age)
 household_with_lab$ageApprox <- as.integer(household_with_lab$ageApprox)
+# Calculating a categorical age (using floor)
 household_with_lab$analysis_age <- ifelse(household_with_lab$knowDob == 1,
                                          floor(as.numeric(household_with_lab$formInfo.interviewDate -
                                                          household_with_lab$dob)/365.25),
